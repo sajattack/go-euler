@@ -45,7 +45,7 @@ func sumSliceDigits(slice []int) int {
 func euler551(n int) int {
 	slice := make([]int, 1, 1e6)
 	slice = append(slice, 1)
-	for i := 1; i < 10e6; i++ {
+	for i := 1; i < 1e6; i++ {
 		slice = append(slice, sumSliceDigits(slice))
 	}
 	return slice[len(slice)-1]
