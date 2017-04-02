@@ -20,9 +20,9 @@ func isPrime(n int) bool {
 	return true
 }
 
-func primeFactorsLessThan(n int) []int {
+func primesLessThan(n int) []int {
 	var primeSlice []int
-	for i := 2; i < int(math.Sqrt(float64(n))+1); i++ {
+	for i := 2; i < n; i++ {
 		if isPrime(i) {
 			primeSlice = append(primeSlice, i)
 		}
@@ -30,13 +30,14 @@ func primeFactorsLessThan(n int) []int {
 	return primeSlice
 }
 
-func main() {
-	number := 600851475143
-	var factors []int
-	for _, prime := range primeFactorsLessThan(number) {
-		if number%prime == 0 {
-			factors = append(factors, prime)
-		}
+func sumSlice(slice []int) int {
+	var sum int
+	for _, v := range slice {
+		sum += v
 	}
-	fmt.Println(factors[len(factors)-1])
+	return sum
+}
+
+func main() {
+	fmt.Println(sumSlice(primesLessThan(2 * 10e5)))
 }

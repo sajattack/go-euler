@@ -1,4 +1,4 @@
-//Solution to Project Euler Problem 03
+//Solution to Project Euler Problem 07
 
 package main
 
