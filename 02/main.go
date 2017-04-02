@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	slice := make([]int, 0, 4*10e6)
+	slice := make([]int, 0)
 	a, b := 1, 2
 	slice = append(slice, a)
 	for a < 4*10e5 {
