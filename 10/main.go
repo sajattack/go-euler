@@ -39,5 +39,5 @@ func sumSlice(slice []int) int {
 }
 
 func main() {
-	fmt.Println(sumSlice(primesLessThan(2 * 10e5)))
+	fmt.Println(sumSlice(primesLessThan(2 * 1e6)))
 }

@@ -6,7 +6,7 @@ func main() {
 	slice := make([]int, 0)
 	a, b := 1, 2
 	slice = append(slice, a)
-	for a < 4*10e5 {
+	for a < 4*1e6 {
 		a = a + b
 		a, b = b, a
 		slice = append(slice, a)

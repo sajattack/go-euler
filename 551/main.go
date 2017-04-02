@@ -43,16 +43,14 @@ func sumSliceDigits(slice []int) int {
 }
 
 func euler551(n int) int {
-	slice := make([]int, 1, 100000)
+	slice := make([]int, 1, 1e6)
 	slice = append(slice, 1)
-	for i := 1; i < 10e15; i++ {
+	for i := 1; i < 10e6; i++ {
 		slice = append(slice, sumSliceDigits(slice))
 	}
 	return slice[len(slice)-1]
 }
 
 func main() {
-	fmt.Println(sumSlice([]int{10, 2, 13, 17}))
-	fmt.Println(sumDigits(1234, 10))
 	fmt.Println(euler551(0))
 }
