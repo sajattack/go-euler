@@ -12,7 +12,7 @@ func factorial(x *big.Int) *big.Int {
 	return n.Mul(x, factorial(n.Sub(x, n)))
 }
 
-func SumBig(n *big.Int, base int) int {
+func sumBig(n *big.Int, base int) int {
 	var sum int
 	i := new(big.Int).Set(n)
 	b := new(big.Int).SetUint64(uint64(base))
@@ -27,5 +27,5 @@ func SumBig(n *big.Int, base int) int {
 func main() {
 	result := factorial(big.NewInt(100))
 	fmt.Println(result)
-	fmt.Println(SumBig(result, 10))
+	fmt.Println(sumBig(result, 10))
 }

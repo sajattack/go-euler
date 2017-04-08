@@ -3,7 +3,7 @@ package main
 import "fmt"
 import "math/big"
 
-func SumBig(n *big.Int, base int) int {
+func sumBig(n *big.Int, base int) int {
 	var sum int
 	i := new(big.Int).Set(n)
 	b := new(big.Int).SetUint64(uint64(base))
@@ -18,5 +18,5 @@ func SumBig(n *big.Int, base int) int {
 func main() {
 	var number big.Int
 	number.Exp(big.NewInt(2), big.NewInt(1000), nil)
-	fmt.Println(SumBig(&number, 10))
+	fmt.Println(sumBig(&number, 10))
 }

@@ -5,7 +5,7 @@ package main
 import "fmt"
 import "math/big"
 
-func SumBig(n *big.Int, base int) int {
+func sumBig(n *big.Int, base int) int {
 	var sum int
 	i := new(big.Int).Set(n)
 	b := new(big.Int).SetUint64(uint64(base))
@@ -42,7 +42,7 @@ func sumSliceDigits(slice []int) int {
 	return sum
 }
 
-func euler551(n int) int {
+func euler551() int {
 	slice := make([]int, 1, 1e6)
 	slice = append(slice, 1)
 	for i := 1; i < 1e6; i++ {
@@ -52,5 +52,5 @@ func euler551(n int) int {
 }
 
 func main() {
-	fmt.Println(euler551(0))
+	fmt.Println(euler551())
 }
